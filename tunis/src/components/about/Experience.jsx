@@ -1,0 +1,45 @@
+import React from "react";
+
+const experienceContent = [
+  {
+    year: "   2019 - Juillet",
+    position: " Photographe ",
+    compnayName: "pour Weyz Clothing",
+    details: `  Shooting de la collection Zeus de la marque française Weyz Clothing`,
+  },
+  {
+    year: "2021 - 2022",
+    position: " Community Manager",
+    compnayName: "pour Raptime",
+    details: `Community manager pour le media Raptime sur Twitter 
+    (Création de contenu/tweets)`,
+  },
+  {
+    year: "XXXXX",
+    position: "XXXXX",
+    compnayName: "XXXXXX",
+    details: ``,
+  },
+];
+
+const Experience = () => {
+  return (
+    <ul>
+      {experienceContent.map((val, i) => (
+        <li key={i}>
+          <div className="icon">
+            <i className="fa fa-briefcase"></i>
+          </div>
+          <span className="time open-sans-font text-uppercase">{val.year}</span>
+          <h5 className="poppins-font text-uppercase">
+            {val.position}
+            <span className="place open-sans-font">{val.compnayName}</span>
+          </h5>
+          <p className="open-sans-font">{val.details}</p>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default Experience;
